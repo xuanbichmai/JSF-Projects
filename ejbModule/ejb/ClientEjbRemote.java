@@ -40,5 +40,7 @@ public interface ClientEjbRemote
     public Client identifierUnClient(Client client);
     
     public Client rechercherUnClient(Client client);
+    
+    public List<Client> selectTousSaufAdmin();
 
 }

@@ -111,4 +111,11 @@ implements ClientEjbLocal, ClientEjbRemote
 		else return null ;
 	}
 
+	@TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+	public List<Client> selectTousSaufAdmin() {
+		String jpqlStmt = "select x from Client x where x.nom != 'admin'";
+		List<Client> lesclients = (List<Client>) queryByRange(jpqlStmt, 0, 0);
+		return lesclients;
+	}
+
 }

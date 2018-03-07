@@ -41,6 +41,7 @@ public interface ClientEjbLocal
     
     public Client rechercherUnClient(Client client);
     
-    
+    public List<Client> selectTousSaufAdmin();
+      
 
 }
